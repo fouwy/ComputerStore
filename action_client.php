@@ -5,16 +5,16 @@
 	$dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	
-	$name = "{$_GET['name']}%";
+	$name = "{$_GET['client_name']}%";
 
-	$stmt = $dbh->prepare('SELECT name, phone_number,address FROM client JOIN person USING(id) WHERE name LIKE ?');
+	$stmt = $dbh->prepare('SELECT name, phone_number,address, tax_id FROM client JOIN person USING(id) WHERE name LIKE ?');
 	$stmt->execute(array($name));
-	$employees = $stmt->fetchAll();
+	$clients = $stmt->fetchAll();
 
-	if (!empty($employees)) {
-		$_SESSION["employees"] = $employees;
+	if (!empty($clients)) {
+		$_SESSION["clients"] = $clients;
 	} else {
-		$_SESSION["msg"] = "No Client with that name";
+		$_SESSION["msg_client"] = "No Client with that name";
 	}
 
 	header("Location: index.php");
