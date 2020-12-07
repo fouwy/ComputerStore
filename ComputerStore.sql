@@ -25,13 +25,13 @@ CREATE TABLE employee (
 
 CREATE TABLE client (
 	id integer PRIMARY KEY REFERENCES person,
-	adress varchar,
+	address varchar,
 	tax_id integer NOT NULL UNIQUE
 );
 
 CREATE TABLE service (
 	id integer PRIMARY KEY,
-	adm_date NOT NULL,
+	adm_date  text NOT NULL,
 	delivery_date text,
 	finish_date text,
 	service_by integer NOT NULL REFERENCES employee,
@@ -83,7 +83,7 @@ Create Table test (
 select name, phone_number
 from employee JOIN person USING(id);
 
-select name, adress, tax_id
+select name, address, tax_id
 from client JOIN person USING(id);
 
 SELECT name, phone_number 
