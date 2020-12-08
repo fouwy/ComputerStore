@@ -20,7 +20,7 @@
 </head>
 <body>
 	<header>
-		<h1><a href="index.php">Very gud store</a></h1>
+		<?php include('header.php') ?>
 	</header>
 	<section>
 		<h2>Employees</h2>
@@ -56,10 +56,13 @@
 		</form>
 		<table border="1">
 			<tr>
-				<th scope="col">Name</th><th scope="col">Phone Number</th><th scope="col">Address</th><th>Tax ID</th>
+				<th scope="col">Name</th>
+				<th scope="col">Phone Number</th>
+				<th scope="col">Address</th>
+				<th scope="col">Tax ID</th>
 			</tr>
-			<?php if (is_array($clients) || !empty($msg_client)) {
-					if(!empty($msg_client)) { ?>
+			<?php if (is_array($clients) || !empty($msg_client)) { ?>
+					<?php if(!empty($msg_client)) { ?>
 					<tr>
 						<td colspan="4"><?php echo $msg_client?></td>
 					</tr>	
@@ -78,5 +81,8 @@
 				?>
 
 	</section>
+	<footer>
+	<?php include('footer.php') ?>
+	</footer>
 </body>
 </html>

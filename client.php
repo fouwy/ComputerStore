@@ -21,7 +21,7 @@
 </head>
 <body>
 <header>
-		<h1><a href="index.php">Your Computer Repair Shop</a></h1>
+	<?php include('header.php') ?>
 </header>
 <section>
 
@@ -54,6 +54,9 @@
 				?>
 
 	</section>
+	<footer>
+	<?php include('footer.php') ?>
+	</footer>
 </body>
 
 
