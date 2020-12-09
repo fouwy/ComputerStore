@@ -26,7 +26,7 @@
 <section>
 
 <h2>Client noobs</h2>
-		<form action="action_client.php">
+		<form action="view_client.php">
 			<input type="text" placeholder="Client name" name="client_name">
 			<input type="submit" value="Search">
 		</form>

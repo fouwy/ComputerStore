@@ -24,7 +24,7 @@
 	</header>
 	<section>
 		<h2>Employees</h2>
-		<form action="action_employee.php">
+		<form action="view_employee.php">
 			<input type="text" placeholder="Employee Name" name="name">
 			<input type="submit" value="Search">
 		</form>
