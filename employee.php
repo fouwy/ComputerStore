@@ -9,19 +9,9 @@
 	unset($_SESSION["msg_client"]);
 	//unset($_SESSION["employees"]);
 	//unset($_SESSION["clients"]);
+	include('templates/header.php')
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Employees Page</title>
-</head>
-<body>
-	<header>
-		<?php include('header.php') ?>
-	</header>
 	<section>
 		<h2>Employees</h2>
 		<form action="view_employee.php">
@@ -50,7 +40,7 @@
 				?>
 		</table>
 		<h2>Client noobs</h2>
-		<form action="action_client.php">
+		<form action="view_client.php">
 			<input type="text" placeholder="Client name" name="client_name">
 			<input type="submit" value="Search">
 		</form>
@@ -81,8 +71,6 @@
 				?>
 
 	</section>
-	<footer>
-	<?php include('footer.php') ?>
-	</footer>
+	<?php include('templates/footer.php') ?>
 </body>
 </html>

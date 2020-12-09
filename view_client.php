@@ -1,9 +1,5 @@
 <?php
-	session_start();
-
-	$dbh = new PDO('sqlite:ComputerStore.db');
-	$dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	require_once("database/init.php");
 	
 	$name = "{$_GET['client_name']}%";
 
