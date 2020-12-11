@@ -1,0 +1,67 @@
+/* https://colorhunt.co/palette/17117 */
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	max-width: 60em;
+	background-color: #eaeaea;
+	margin: 0 auto;
+	display: grid;
+  	grid-template-rows: auto 1fr auto;
+}
+
+/**
+ * Header
+ **/
+
+body > header {
+	background-color: #252a34;
+	border-bottom: 0.25em solid #ff2e63;
+}
+
+body > header h1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	margin: 0 auto;
+	padding: 20px 20px 20px 20px;
+}
+
+body > header h1 a{
+	text-decoration: none;
+	background-color: #252a34;
+	color: #08d9d6;
+	padding-right: 0.5em;
+	border-right: 0.01em solid #ff2e63;
+}
+
+/**
+ * Footer
+ **/
+
+body > footer {
+	background-color: #252a34;
+	color: #eaeaea;
+	padding: 0.1em;
+}
+
+#homepage {
+	margin: 10% auto;
+}
+
+
+#homepage a:link, a:visited {
+	background-color: #252a34;
+	color: #08d9d6;
+	padding: 0.7em 0.5em;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 5px;
+}
+
+#homepage a:hover, a:active {
+	background-color: #ff2e63;
+	color: #252a34;
+}
