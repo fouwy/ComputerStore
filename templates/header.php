@@ -7,5 +7,5 @@
 </head>
 <body>
     <header>
-        <h1><a href='index.php'>Your Computer Repair Shop</a></h1>
+        <h1><a href='http://localhost:8080/ComputerStore/sibd/index.php'>Your Computer Repair Shop</a></h1>
     </header>
