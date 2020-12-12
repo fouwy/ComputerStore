@@ -1,7 +1,10 @@
-<?php include('../templates/header.php') ?>
+<?php include('../templates/header.php');
+	require_once("insert_employeedb.php");
+?>
+
 <section id="register">
 	<h2>Empregados | Login</h2>
-	<form action="action_register.php" method="post">
+	<form action="action_registeremployee.php" method="post">
 		<label for="name">Nome Completo</label>
 		<input type="text" placeholder="" name="name" required>
 		<br>
