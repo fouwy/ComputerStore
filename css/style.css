@@ -10,7 +10,8 @@ body {
 	background-color: #eaeaea;
 	margin: 0 auto;
 	display: grid;
-  	grid-template-rows: auto 1fr auto;
+	grid-template-rows: auto 1fr auto;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /**
@@ -50,6 +51,12 @@ body > footer {
 	margin: 10% auto;
 }
 
+/**
+ * Main Section
+ **/
+ #homepage a {
+	 transition-duration: 0.4s;
+ }
 
 #homepage a:link, a:visited {
 	background-color: #252a34;
@@ -65,3 +72,46 @@ body > footer {
 	background-color: #ff2e63;
 	color: #252a34;
 }
+
+.row {
+	display: flex;
+}
+
+.column {
+	flex: 50%;
+}
+
+input {
+	width: 100%;
+	padding: 0.6em 1em;
+	margin: 1em 0;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+input[type="submit"] {
+	background-color: #252a34;
+	color: #08d9d6;
+	padding: 0.7em 0.5em;
+	font-size: medium;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.button {
+	width: 80%;
+	box-sizing: border-box;
+	display: inline-block;
+	background-color: #252a34;
+	color: #08d9d6;
+	white-space: nowrap;
+	text-align: center;
+	padding: 0.7em 0.5em;
+	margin: 3.5% 10%;
+	font-size: medium;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+
