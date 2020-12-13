@@ -2,7 +2,7 @@
 <div class="row">
     <section class="column">
         <h2>Empregados | Login</h2>
-        <form action="action_employeeLogin.php" method="post">
+        <form action="action_loginemployee.php" method="post">
             <label for="name">Username</label>
             <input type="text" placeholder="" name="name" required>
             <br>

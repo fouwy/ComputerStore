@@ -1,9 +1,14 @@
-<?php include('../templates/header.php') ?>
+<?php include('../templates/header.php') 
 
+
+?>
+
+<!DOCTYPE html>
+<html>
 <div class="row">
 	<section class="column">
 		<h2>Empregados | Registo</h2>
-		<form action="action_register.php" method="post">
+		<form action="action_registeremployee.php" method="post">
 			<label for="name">Nome Completo</label>
 			<input type="text" placeholder="" name="name" required>
 			<br>
@@ -26,4 +31,5 @@
 		<a href="employee_login.php" class="button">Login</a>
 	</section>
 </div>
+</html>
 <?php include('../templates/footer.php') ?>
