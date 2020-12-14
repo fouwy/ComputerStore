@@ -4,7 +4,7 @@
         <h2>Empregados | Login</h2>
         <form action="action_employeeLogin.php" method="post">
             <label for="name">Username</label>
-            <input type="text" placeholder="" name="name" required>
+            <input type="text" placeholder="" name="username" required>
             <br>
             <label for="password">Password</label>
             <input type="password" placeholder="" name="password" required>

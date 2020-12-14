@@ -1,5 +1,5 @@
 <?php
-include 'insert_employeedb.php';
+include '../database/insert_employeedb.php';
 require_once("../database/init.php");
 
 $name=$_POST["name"];
