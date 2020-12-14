@@ -21,12 +21,16 @@ body {
 body > header {
 	background-color: #252a34;
 	border-bottom: 0.25em solid #ff2e63;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
 }
 
 body > header h1 {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	margin: 0 auto;
+	margin: 0;
 	padding: 20px 20px 20px 20px;
+
 }
 
 body > header h1 a{
@@ -37,6 +41,33 @@ body > header h1 a{
 	border-right: 0.01em solid #ff2e63;
 }
 
+body > header form {
+	display: flex;
+	flex-direction: row;
+	text-decoration: none;
+	background-color: #252a34;
+	color: #08d9d6;
+}
+
+body > header form label {
+	display: block;
+	margin-top: 1.5em;
+	padding-right: 1em;
+	white-space: nowrap;
+	font-size: large;
+}
+
+body > header form input {
+	display: block;
+	margin: 1em 1em;
+	border-color: #ff2e63;
+	transition-duration: 0.4s;
+}
+
+body > header form input:hover {
+	background-color: #ff2e63;
+	color: #252a34;
+}
 /**
  * Footer
  **/
@@ -54,7 +85,7 @@ body > footer {
 /**
  * Main Section
  **/
- #homepage a {
+#homepage a {
 	 transition-duration: 0.4s;
  }
 

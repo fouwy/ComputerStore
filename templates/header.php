@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,4 +13,12 @@
 <body>
     <header>
         <h1><a href='http://localhost:8080/ComputerStore/sibd/index.php'>Your Computer Repair Shop</a></h1>
+        
+        <?php if (!empty($_SESSION["name"])) { ?>
+            <form id="logout" action="action_logout.php"> 
+                <label>Welcome <?php echo $_SESSION["name"]?></label>
+                <input type="submit" value="Log Out">
+            </form>
+        <?php } ?>
     </header>
+
