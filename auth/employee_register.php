@@ -1,9 +1,13 @@
-<?php include('../templates/header.php') ?>
+<?php 
+	session_start();
+	$msg = $_SESSION["msg"];
+	include('../templates/header.php');
+?>
 
 <div class="row">
 	<section class="column">
-		<h2>Empregados | Registo</h2>
-		<form action="action_register.php" method="post">
+		<h2>Empregados | Registo <?php echo $msg?></h2>
+		<form action="action_registeremployee.php" method="post">
 			<label for="name">Nome Completo</label>
 			<input type="text" placeholder="" name="name" required>
 			<br>
