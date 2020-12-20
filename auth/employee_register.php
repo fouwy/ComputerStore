@@ -4,11 +4,6 @@
 	include('../templates/header.php');
 ?>
 
-
-?>
-
-<!DOCTYPE html>
-<html>
 <div class="row">
 	<section class="column">
 		<h2>Empregados | Registo <?php echo $msg?></h2>
@@ -35,5 +30,4 @@
 		<a href="employee_login.php" class="button">Login</a>
 	</section>
 </div>
-</html>
 <?php include('../templates/footer.php') ?>

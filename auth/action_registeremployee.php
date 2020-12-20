@@ -2,10 +2,10 @@
 include '../database/insert_employeedb.php';
 require_once("../database/init.php");
 
-$name = $_POST["name"];
-$phone = $_POST["phone"];
-$username = $_POST["username"];
-$password = $_POST["password"];
+$name=$_POST["name"];
+$phone=$_POST["phone"];
+$username=$_POST["username"];
+$password=$_POST["password"];
 
 try {
 	attachEmployeeToPerson($name, $phone,$username,$password);
