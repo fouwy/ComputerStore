@@ -89,3 +89,7 @@ from client JOIN person USING(id);
 SELECT name, phone_number 
 FROM employee JOIN person USING(id) 
 WHERE name LIKE 'Pedro%';
+
+SELECT person.name 
+FROM employee JOIN person USING(id)
+WHERE username='pedro1' AND password='pass';
