@@ -10,13 +10,14 @@
 	
 	include('templates/header.php')
 ?>
-<section>
-	<h2>Employees</h2>
+<div class="row">
+<section class="column">
+	<h2>Search Employee</h2>
 	<form action="view_employee.php">
 		<input type="text" placeholder="Employee Name" name="name">
 		<input type="submit" value="Search">
 	</form>
-	<table border="1">
+	<table>
 		<tr>
 			<th scope="col">Name</th><th scope="col">Phone Number</th>
 		</tr>
@@ -37,12 +38,15 @@
 			}
 			?>
 	</table>
-	<h2>Client noobs</h2>
+
+	<hr class="between_tables">
+
+	<h2>Search Client noobs</h2>
 	<form action="view_client.php">
 		<input type="text" placeholder="Client name" name="client_name">
 		<input type="submit" value="Search">
 	</form>
-	<table border="1">
+	<table>
 		<tr>
 			<th scope="col">Name</th>
 			<th scope="col">Phone Number</th>
@@ -69,4 +73,8 @@
 			?>
 	</table>
 </section>
+<section class="column">
+	<a href="employee.php" class="button">Add a Service</a>
+</section>
+</div>
 <?php include('templates/footer.php') ?>

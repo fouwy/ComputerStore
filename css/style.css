@@ -145,4 +145,35 @@ input[type="submit"] {
 	border-radius: 5px;
 }
 
+/**
+ * Tables
+ **/
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+}
 
+th, td {
+	padding: 0.4em;
+	border: 1px solid black;
+}
+
+th {
+	background-color: #252a34;
+	color: #08d9d6;
+}
+tr {
+	transition-duration: 0.1s;
+}
+
+tr:hover {
+	background-color: #252a34;
+	color: #eaeaea;
+}
+
+hr.between_tables {
+	border-top: 2px dashed #08d9d6;
+	margin-top: 2em;
+}

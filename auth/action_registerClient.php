@@ -21,7 +21,6 @@ try {
 	} else {
 		$_SESSION["msg"] = "Registration Failed" . ($err_msg);
 	}
-
 }
 header('Location: client_register.php');
 ?>
