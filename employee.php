@@ -68,6 +68,6 @@
 				} 
 			}
 			?>
-
+	</table>
 </section>
 <?php include('templates/footer.php') ?>

@@ -8,7 +8,8 @@
     $name = isEmployeeLoginValid($username, $password);
 
     if (!empty($name)) {
-        $_SESSION["name"] = $username;
+        //die(var_dump($name));
+        $_SESSION["name"] = $name["name"];
         header('Location: ../employee.php');
     } else {
         $_SESSION["msg"] = "Login Failed";
