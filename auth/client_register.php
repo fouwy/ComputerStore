@@ -2,9 +2,18 @@
 <div class="row">
 	<section class="column">
 		<h2>Clientes | Registo</h2>
-		<form action="action_register.php" method="post">
+		<form action="action_registerClient.php" method="post">
 			<label for="name">Nome Completo</label>
 			<input type="text" placeholder="" name="name" required>
+			<br>
+			<label for="phone">Número de Telemóvel</label>
+			<input type="tel" name="phone" pattern="[0-9]{9}" required>
+			<br>
+			<label for="address">Morada</label>
+			<input type="text" name="address">
+			<br>
+			<label for="tax_id">NIF</label>
+			<input type="text" name="tax_id">
 			<br>
 			<label for="username">Username</label>
 			<input type="text" placeholder="Usado para iniciar sessão" name="username" required>

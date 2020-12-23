@@ -1,10 +1,14 @@
-<?php include('../templates/header.php') ?>
+<?php 
+    include('../templates/header.php');
+    session_start();
+?>
+
 <div class="row">
 <section class="column">
     <h2>Clientes | Login</h2>
     <form action="action_clientLogin.php" method="post">
         <label for="name">Username</label>
-        <input type="text" placeholder="" name="name" required>
+        <input type="text" placeholder="" name="username" required>
         <br>
         <label for="password">Password</label>
         <input type="password" placeholder="" name="password" required>

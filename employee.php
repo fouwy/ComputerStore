@@ -7,8 +7,7 @@
 
 	unset($_SESSION["msg"]);
 	unset($_SESSION["msg_client"]);
-	//unset($_SESSION["employees"]);
-	//unset($_SESSION["clients"]);
+	
 	include('templates/header.php')
 ?>
 <section>
