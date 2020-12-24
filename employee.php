@@ -31,7 +31,7 @@
 				else {
 					foreach($employees as $employee) { ?>
 			<tr>
-				<td><?php echo $employee["name"]?></td><td><?php echo $employee["phone_number"]?></td>
+				<td><?php echo $employee["name"];?></td><td><?php echo $employee["phone_number"]?></td>
 			</tr>
 		<?php 		}
 				} 
@@ -74,7 +74,8 @@
 	</table>
 </section>
 <section class="column">
-	<a href="employee.php" class="button">Add a Service</a>
+	<a href="addService.php" class="button">Add a Service</a>
+	<a href="addComputer.php" class="button">Add a Computer to Database</a>
 </section>
 </div>
 <?php include('templates/footer.php') ?>
