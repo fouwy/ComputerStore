@@ -3,7 +3,7 @@
 	
 	$name = "{$_GET['name']}%";
 
-	$stmt = $dbh->prepare('SELECT name, phone_number, username FROM employee JOIN person USING(id) WHERE name LIKE ?');
+	$stmt = $dbh->prepare('SELECT id, name, phone_number, username FROM employee JOIN person USING(id) WHERE name LIKE ?');
 	$stmt->execute(array($name));
 	$employees = $stmt->fetchAll();
 

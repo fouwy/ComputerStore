@@ -117,3 +117,7 @@ adm_date, delivery_date, finish_date,
 service_by, service_item, total)
 VALUES (datetime('now'), datetime('now', '+1 day'),
 datetime('now','+2 day'),1,1,10);
+
+SELECT employee.id 
+FROM employee JOIN person USING(id)
+WHERE person.username = 'pedro1';

@@ -13,8 +13,8 @@
 
     //TODO: need to check if box for time and price of a certain test is checked
 
-    var_dump($adm_date, $finish_date, $deliv_date, $item, $tests, $prices, $times);
-    die();
+    // var_dump($adm_date, $finish_date, $deliv_date, $item, $tests, $prices, $times);
+    // die();
 
     // if(empty($tests)) {
     //     echo("no tests");

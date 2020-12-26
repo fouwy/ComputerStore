@@ -20,14 +20,7 @@
         <input type="date" name="deliv_date">
         <br>
         <label for="service_by">Employee tasked</label>
-        <input list="employees" name="service_by" placeholder="Insert Employee ID">
-        <datalist id="employees">
-            <?php foreach($employees as $employee) { 
-            // $names = explode(" ", $employee["name"]);
-            // $lastName = array_pop($names);?>
-            <option value=<?php echo $employee["username"]; ?>></option>
-            <?php } ?>
-        </datalist>
+        <input type="number" name="service_by" placeholder="Insert Employee ID">
         <br>
         <label for="item">Computer ID</label>
         <input type="number" name="item">

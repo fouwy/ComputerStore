@@ -19,19 +19,21 @@
 	</form>
 	<table>
 		<tr>
-			<th scope="col">Name</th><th scope="col">Phone Number</th>
+			<th scope="col">ID</th><th scope="col">Name</th><th scope="col">Phone Number</th>
 		</tr>
 
 		<?php if (is_array($employees) || !empty($msg)) {
 				if(!empty($msg)) { ?>
 				<tr>
-					<td colspan="2"><?php echo $msg?></td>
+					<td colspan="3"><?php echo $msg?></td>
 				</tr>	
 				<?php } 
 				else {
 					foreach($employees as $employee) { ?>
 			<tr>
-				<td><?php echo $employee["name"];?></td><td><?php echo $employee["phone_number"]?></td>
+				<td><?php echo $employee["id"];?></td>
+				<td><?php echo $employee["name"];?></td>
+				<td><?php echo $employee["phone_number"]?></td>
 			</tr>
 		<?php 		}
 				} 
@@ -48,6 +50,7 @@
 	</form>
 	<table>
 		<tr>
+			<th scope="col">ID</th>
 			<th scope="col">Name</th>
 			<th scope="col">Phone Number</th>
 			<th scope="col">Address</th>
@@ -56,16 +59,17 @@
 		<?php if (is_array($clients) || !empty($msg_client)) { ?>
 				<?php if(!empty($msg_client)) { ?>
 				<tr>
-					<td colspan="4"><?php echo $msg_client?></td>
+					<td colspan="5"><?php echo $msg_client?></td>
 				</tr>	
 				<?php } 
 				else {
 					foreach($clients as $client) { ?>
 			<tr>
-				<td><?php echo $client["name"]?>
-					</td><td><?php echo $client["phone_number"]?>
-					<td><?php echo $client["address"]?></td>
-					<td><?php echo $client["tax_id"]?></td>
+				<td><?php echo $client["id"];?></td>
+				<td><?php echo $client["name"]?></td>
+				<td><?php echo $client["phone_number"]?>
+				<td><?php echo $client["address"]?></td>
+				<td><?php echo $client["tax_id"]?></td>
 			</tr>
 		<?php 		}
 				} 
