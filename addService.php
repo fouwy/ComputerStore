@@ -5,18 +5,18 @@
     unset($_SESSION["msg"]);
     include('templates/header.php');
 ?>
-
-<section>
+<div class="row">
+<section class="column">
     <h2>Add Service </h2>
     <p><?php echo $msg;?></p>
     <form action="service/action_addService.php">
-        <label for="adm_date">Admission date</label>
+        <label for="adm_date">Admission date</label><br>
         <input type="date" name="adm_date">
         <br>
-        <label for="finish_date">Finish date</label>
+        <label for="finish_date">Finish date</label><br>
         <input type="date" name="finish_date">
         <br>
-        <label for="deliv_date">Delivery date</label>
+        <label for="deliv_date">Delivery date</label><br>
         <input type="date" name="deliv_date">
         <br>
         <label for="service_by">Employee tasked</label>
@@ -24,21 +24,23 @@
         <br>
         <label for="item">Computer ID</label>
         <input type="number" name="item">
-        <label>Tests Done</label>
+        <h4>Tests Done</h4>
+        <label for="test[]">RAM Test (MemTest86)</label>
         <input type="checkbox" name="test[]" value="ram">
-        RAM Test (MemTest86) <br>
         <p>Test duration:</p>
         <input type="time" name="time[]">
         <p>Test Price:</p>
         <input type="number" name="price[]">
+
+        <label for="test[]">CPU Test (Aida64)</label>
         <input type="checkbox" name="test[]" value="cpu">
-        CPU Test (Aida64) <br>
         <p>Test duration:</p>
         <input type="time" name="time[]">
         <p>Test Price:</p>
         <input type="number" name="price[]">
+
+        <label for="test[]">GPU Test (3DMark)</label>
         <input type="checkbox" name="test[]" value="gpu">
-        GPU Test (3DMark) <br>
         <p>Test duration:</p>
         <input type="time" name="time[]">
         <p>Test Price:</p>
@@ -46,5 +48,8 @@
         <input type="submit" value="Add">
     </form>
 </section>
+<section class="column">
 
+</section>
+</div>
 <?php include('templates/footer.php') ?>

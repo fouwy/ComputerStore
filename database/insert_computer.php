@@ -1,9 +1,9 @@
 <?php
-    function insertModel($brand, $model_year){
+    function insertModel($brand, $model_year, $model_name){
         global $dbh;
-        $stmt = $dbh->prepare(' INSERT INTO model (model_year, brand)
-                                VALUES(?,?)');
-        $stmt->execute(array($model_year, $brand));
+        $stmt = $dbh->prepare(' INSERT INTO model (model_year, brand, model_name)
+                                VALUES(?,?,?)');
+        $stmt->execute(array($model_year, $brand, $model_name));
 
         return $dbh->lastInsertId();
     }
@@ -26,14 +26,14 @@
         return $dbh->lastInsertId();
     }
 
-    function insertComputerInDB($client, $brand, $model_year) {
+    function insertComputerInDB($client, $brand, $model_year, $model_name) {
         global $dbh;
         try {
             //make sure foreign key constraint is ON
             $dbh->exec('PRAGMA foreign_keys = ON');
     
             $dbh->beginTransaction();
-            $model_id = insertModel($brand, $model_year);
+            $model_id = insertModel($brand, $model_year, $model_name);
             $client_id = getClientID($client);
             $computer_id = assignModelToComputer($client_id["id"], $model_id);
             $dbh->commit();
