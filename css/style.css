@@ -133,6 +133,11 @@ input[type="time"],[type="date"] {
 	width: 20%;
 }
 
+
+input[type="radio"] {
+	width: 5%;
+}
+
 .button {
 	width: 80%;
 	box-sizing: border-box;
