@@ -129,6 +129,10 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
+input[type="time"],[type="date"] {
+	width: 20%;
+}
+
 .button {
 	width: 80%;
 	box-sizing: border-box;

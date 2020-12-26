@@ -1,12 +1,15 @@
 <?php
     session_start();
     $employees = $_SESSION["employees"];
+    $msg = $_SESSION["msg"];
+    unset($_SESSION["msg"]);
     include('templates/header.php');
 ?>
 
 <section>
     <h2>Add Service </h2>
-    <form action="">
+    <p><?php echo $msg;?></p>
+    <form action="service/action_addService.php">
         <label for="adm_date">Admission date</label>
         <input type="date" name="adm_date">
         <br>
@@ -17,7 +20,7 @@
         <input type="date" name="deliv_date">
         <br>
         <label for="service_by">Employee tasked</label>
-        <input list="employees" name="service_by">
+        <input list="employees" name="service_by" placeholder="Insert Employee ID">
         <datalist id="employees">
             <?php foreach($employees as $employee) { 
             // $names = explode(" ", $employee["name"]);
@@ -29,12 +32,25 @@
         <label for="item">Computer ID</label>
         <input type="number" name="item">
         <label>Tests Done</label>
-        <input type="checkbox" name="test1">
-        <label for="test1">RAM Test (MemTest86)</label>
-        <input type="checkbox" name="test2">
-        <label for="test2">CPU Test (Aida64)</label>
-        <input type="checkbox" name="test3">
-        <label for="test3">GPU Test (3DMark)</label>
+        <input type="checkbox" name="test[]" value="ram">
+        RAM Test (MemTest86) <br>
+        <p>Test duration:</p>
+        <input type="time" name="time[]">
+        <p>Test Price:</p>
+        <input type="number" name="price[]">
+        <input type="checkbox" name="test[]" value="cpu">
+        CPU Test (Aida64) <br>
+        <p>Test duration:</p>
+        <input type="time" name="time[]">
+        <p>Test Price:</p>
+        <input type="number" name="price[]">
+        <input type="checkbox" name="test[]" value="gpu">
+        GPU Test (3DMark) <br>
+        <p>Test duration:</p>
+        <input type="time" name="time[]">
+        <p>Test Price:</p>
+        <input type="number" name="price[]">
+        <input type="submit" value="Add">
     </form>
 </section>
 
