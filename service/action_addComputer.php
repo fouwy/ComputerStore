@@ -4,10 +4,11 @@
 
     $client = $_GET["client_id"];
     $brand = $_GET["brand"];
+    $model = $_GET["model_name"];
     $year = $_GET["model_year"];
 
     try {
-        $computer_id = insertComputerInDB($client, $brand, $year);
+        $computer_id = insertComputerInDB($client, $brand, $year, $model);
     } catch (PDOException $e) {
         $err_msg = $e->getMessage();
         $_SESSION["msg"] = $err_msg;

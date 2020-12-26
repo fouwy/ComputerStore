@@ -27,6 +27,8 @@
     <input type="radio" id="b6" name="brand" value="MSI">
     <label for="b6">MSI</label>
     <br><br>
+    <label for="model_name">Modelo</label>
+    <input type="text" name="model_name">
     <label for="model_year">Ano do modelo</label>
     <input type="number" name="model_year" min="2010" step="1" max="2050" value="2020">
     <input type="submit" value="Add computer">
