@@ -129,12 +129,12 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
-input[type="time"],[type="date"] {
+/* input[type="time"],[type="date"] {
 	width: 20%;
 }
+*/
 
-
-input[type="radio"] {
+input[type="checkbox"], [type="radio"] {
 	width: 5%;
 }
 

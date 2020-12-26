@@ -5,8 +5,8 @@
     $msg = $_SESSION["msg"];
     unset($_SESSION["msg"]);
 ?>
-
-<section>
+<div class="row">
+<section class="column">
 <p> <?php echo $msg;?></p>
 <h2>Add a Computer</h2>
 <form action="service/action_addComputer.php">
@@ -39,5 +39,8 @@
     <input type="submit" value="Add computer">
 </form>
 </section>
+<section class="column">
+</section>
+</div>
 
 <?php include('templates/footer.php') ?>
