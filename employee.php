@@ -41,10 +41,9 @@
 			}
 			?>
 	</table>
-
-	<hr class="between_tables">
-
-	<h2>Search Client noobs</h2>
+</section>
+<section class="column">
+<h2>Search Client noobs</h2>
 	<form action="view_client.php">
 		<input type="text" placeholder="Client name" name="client_name">
 		<input type="submit" value="Search">
@@ -77,8 +76,6 @@
 			}
 			?>
 	</table>
-</section>
-<section class="column">
 </section>
 </div>
 <?php include('templates/footer.php') ?>

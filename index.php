@@ -1,11 +1,13 @@
 <?php include('templates/header.php') ?>
 
-<nav id=homepage>
-<a href="auth/client_login.php">I'm a client</a>
-<a href="auth/employee_login.php">I'm an employee</a>
-<a href="img/pic.png">surprise</a>
+<nav class="navbar">
+<ul>
+    <li><a href="auth/client_login.php">I'm a client</a></li>
+    <li><a href="auth/employee_login.php">I'm an employee</a></li>
+    <li><a href="img/pic.png">surprise</a></li>
+</ul>
 </nav>
-
-
+<section></section>
+<section></section>
 
 <?php include('templates/footer.php') ?>

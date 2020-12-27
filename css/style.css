@@ -10,7 +10,7 @@ body {
 	background-color: #eaeaea;
 	margin: 0 auto;
 	display: grid;
-	grid-template-rows: auto 1fr auto;
+	grid-template-rows: min-content 2.5em auto min-content min-content;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -78,44 +78,20 @@ body > footer {
 	padding: 0.1em;
 }
 
-#homepage {
-	margin: 10% auto;
-}
-
-/**
- * Main Section
- **/
-#homepage a {
-	 transition-duration: 0.4s;
- }
-
-
-#homepage a:link, a:visited {
-	background-color: #252a34;
-	color: #08d9d6;
-	padding: 0.7em 0.5em;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	border-radius: 5px;
-}
-
-#homepage a:hover, a:active {
-	background-color: #ff2e63;
-	color: #252a34;
-}
-
 /**
  * Nav Bar
 **/
-
 .navbar {
+	background-color: #252a34;
+	height: fit-content;
+}
+
+.navbar ul{
 	list-style-type: none;
 	position: sticky;
-	top: 0;
 	margin: 0;
 	padding: 0;
-	background-color: #252a34;
+
 }
 
 .navbar li {
@@ -140,22 +116,20 @@ body > footer {
 	background-color: #ff2e63;
 	color:  #252a34;
 }
-
 /**
  * Other
 **/
 
 .row {
 	display: flex;
+	/* margin-bottom: 25%; */
 }
 
 .column {
 	flex: 50%;
+	margin: 0 1%;
 }
 
-.column form {
-	margin: auto 2%;
-}
 
 input {
 	width: 100%;
@@ -188,7 +162,7 @@ input[type="checkbox"], [type="radio"] {
 }
 
 .addServButton {
-	margin-bottom: 25%;
+	margin-bottom: 22%;
 }
 
 .button {
