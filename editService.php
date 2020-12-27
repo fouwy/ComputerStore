@@ -2,7 +2,9 @@
     session_start();
     include('templates/header.php');
     $msg = $_SESSION["msg"];
+    $msg_serv = $_SESSION["msg_serv"];
     unset($_SESSION["msg"]);
+    unset($_SESSION["msg_serv"]);
 ?>
 
 
@@ -52,7 +54,13 @@
 
 <section class="column">
     <h2>Edit Service</h2>
-    <form action="service/action_editService">
+    <?php if(!empty($msg_serv)) {
+        echo "<p>" . $msg_serv . "</p>";
+    } ?>
+    <form action="service/action_editService.php">
+        <label for="service_id">Service</label>
+        <input type="number" name="service_id" placeholder="Insert Service ID">
+
         <label for="edit_finish">Finish date</label>
         <input type="date" name="edit_finish">
 
