@@ -12,10 +12,10 @@
 
 	unset($_SESSION["msg"]);
 	unset($_SESSION["msg_client"]);
+	
+	include('templates/header.php');
+	include('templates/employee_navbar.html');
 	unset($_SESSION["msg_services"]);
-
-
-	include('templates/header.php')
 ?>
 <div class="row">
 <section class="column">
@@ -47,10 +47,9 @@
 			}
 			?>
 	</table>
-
-	<hr class="between_tables">
-
-	<h2>Search Client by Name</h2>
+</section>
+<section class="column">
+<h2>Search Client noobs</h2>
 	<form action="view_client.php">
 		<input type="text" placeholder="Client name" name="client_name">
 		<input type="submit" value="Search">
@@ -118,11 +117,6 @@
 	</table>
 
 
-</section>
-<section class="column">
-	<a href="addService.php" class="button">Add a Service</a>
-	<a href="addComputer.php" class="button">Add a Computer to Database</a>
-	<a href="editService.php" class="button">Edit a Service</a>
 </section>
 </div>
 <?php include('templates/footer.php') ?>

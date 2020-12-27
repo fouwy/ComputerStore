@@ -10,7 +10,7 @@ body {
 	background-color: #eaeaea;
 	margin: 0 auto;
 	display: grid;
-	grid-template-rows: auto 1fr auto;
+	grid-template-rows: min-content 2.5em auto min-content min-content;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -78,44 +78,58 @@ body > footer {
 	padding: 0.1em;
 }
 
-#homepage {
-	margin: 10% auto;
-}
-
 /**
- * Main Section
- **/
-#homepage a {
-	 transition-duration: 0.4s;
- }
-
-
-#homepage a:link, a:visited {
+ * Nav Bar
+**/
+.navbar {
 	background-color: #252a34;
-	color: #08d9d6;
-	padding: 0.7em 0.5em;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	border-radius: 5px;
+	height: fit-content;
 }
 
-#homepage a:hover, a:active {
-	background-color: #ff2e63;
-	color: #252a34;
+.navbar ul{
+	list-style-type: none;
+	position: sticky;
+	margin: 0;
+	padding: 0;
+
 }
+
+.navbar li {
+	display: inline;
+	float: left;
+	border-right: 1px solid #eaeaea;
+}
+
+.navbar li:last-child {
+	border-right: none;
+}
+
+.navbar li a {
+	display: block;
+	text-align: center;
+	padding: 0.7em 2em;
+	text-decoration: none;
+	color: #08d9d6;
+}
+
+.navbar li a:hover {
+	background-color: #ff2e63;
+	color:  #252a34;
+}
+/**
+ * Other
+**/
 
 .row {
 	display: flex;
+	/* margin-bottom: 25%; */
 }
 
 .column {
 	flex: 50%;
+	margin: 0 1%;
 }
 
-.column form {
-	margin: auto 2%;
-}
 
 input {
 	width: 100%;
@@ -148,7 +162,7 @@ input[type="checkbox"], [type="radio"] {
 }
 
 .addServButton {
-	margin-bottom: 25%;
+	margin-bottom: 22%;
 }
 
 .button {

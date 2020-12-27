@@ -16,4 +16,6 @@
         <a href="employee_register.php" class="button">Novo Registo</a>
     </section>
 </div>
+<section></section>
+<section></section>
 <?php include('../templates/footer.php') ?>

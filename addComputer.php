@@ -1,10 +1,12 @@
 <?php
     session_start();
-    include('templates/header.php');
-
     $msg = $_SESSION["msg"];
     unset($_SESSION["msg"]);
+
+    include('templates/header.php');
+    include('templates/employee_navbar.html');
 ?>
+
 <div class="row">
 <section class="column">
 <p> <?php echo $msg;?></p>
@@ -42,5 +44,4 @@
 <section class="column">
 </section>
 </div>
-
 <?php include('templates/footer.php') ?>

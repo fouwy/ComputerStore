@@ -31,4 +31,6 @@
 		<a href="client_login.php" class="button">Login</a>
 	</section>
 </div>
+<section></section>
+<section></section>
 <?php include('../templates/footer.php') ?>

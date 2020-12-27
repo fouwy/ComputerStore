@@ -3,7 +3,9 @@
     $employees = $_SESSION["employees"];
     $msg = $_SESSION["msg"];
     unset($_SESSION["msg"]);
+    
     include('templates/header.php');
+    include('templates/employee_navbar.html');
 ?>
 <div class="row">
 <section class="column">
