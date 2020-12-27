@@ -2,17 +2,24 @@
 	session_start();
 	$msg = $_SESSION["msg"];
 	$msg_client = $_SESSION["msg_client"];
+	$msg_services = $_SESSION["msg_services"];
+
 	$employees = $_SESSION["employees"];
 	$clients = $_SESSION["clients"];
 
+	$services = $_SESSION["services"];
+	//new one^^
+
 	unset($_SESSION["msg"]);
 	unset($_SESSION["msg_client"]);
-	
+	unset($_SESSION["msg_services"]);
+
+
 	include('templates/header.php')
 ?>
 <div class="row">
 <section class="column">
-	<h2>Search Employee</h2>
+	<h2>Search Employees by Name</h2>
 	<form action="view_employee.php">
 		<input type="text" placeholder="Employee Name" name="name">
 		<input type="submit" value="Search">
@@ -43,7 +50,7 @@
 
 	<hr class="between_tables">
 
-	<h2>Search Client noobs</h2>
+	<h2>Search Client by Name</h2>
 	<form action="view_client.php">
 		<input type="text" placeholder="Client name" name="client_name">
 		<input type="submit" value="Search">
@@ -76,6 +83,41 @@
 			}
 			?>
 	</table>
+	<hr class="between_tables">
+
+	<h2>Search parts used on a service by Service ID</h2>
+	<form action="view_servicesbyid.php">
+		<input type="text" placeholder="Service ID" name="serv_id">
+		<input type="submit" value="Search">
+	</form>
+	<table>
+		<tr>
+			<th scope="col">Name of Part</th>
+			<th scope="col">Price</th>
+			<th scope="col">Category</th>
+		
+		</tr>
+		<?php if (is_array($services) || !empty($msg_services)) { ?>
+				<?php if(!empty($msg_services)) { ?>
+				<tr>
+					<td colspan="5"><?php echo $msg_services?></td>
+				</tr>	
+				<?php } 
+				else {
+					foreach($services as $service) { ?>
+			<tr>
+				<td><?php echo $service["name"];?></td>
+				<td><?php echo $service["price"]?></td>
+				<td><?php echo $service["category"]?>
+			
+			</tr>
+		<?php 		}
+				} 
+			}
+			?>
+	</table>
+
+
 </section>
 <section class="column">
 	<a href="addService.php" class="button">Add a Service</a>
