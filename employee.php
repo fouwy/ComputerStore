@@ -8,7 +8,8 @@
 	unset($_SESSION["msg"]);
 	unset($_SESSION["msg_client"]);
 	
-	include('templates/header.php')
+	include('templates/header.php');
+	include('templates/employee_navbar.html');
 ?>
 <div class="row">
 <section class="column">
@@ -78,9 +79,6 @@
 	</table>
 </section>
 <section class="column">
-	<a href="addService.php" class="button">Add a Service</a>
-	<a href="addComputer.php" class="button">Add a Computer to Database</a>
-	<a href="editService.php" class="button">Edit a Service</a>
 </section>
 </div>
 <?php include('templates/footer.php') ?>

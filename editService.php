@@ -1,10 +1,12 @@
 <?php
     session_start();
-    include('templates/header.php');
     $msg = $_SESSION["msg"];
     $msg_serv = $_SESSION["msg_serv"];
     unset($_SESSION["msg"]);
     unset($_SESSION["msg_serv"]);
+
+    include('templates/header.php');
+    include('templates/employee_navbar.html');
 ?>
 
 
@@ -73,7 +75,6 @@
         <input type="submit" value="Edit Service">
     </form>
 </section>
-
 </div>
 <?php
     include('templates/footer.php');
