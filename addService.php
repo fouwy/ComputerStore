@@ -24,32 +24,31 @@
         <br>
         <label for="item">Computer ID</label>
         <input type="number" name="item">
-        <h4>Tests Done</h4>
-        <label for="test[]">RAM Test (MemTest86)</label>
-        <input type="checkbox" name="test[]" value="ram">
-        <p>Test duration:</p>
-        <input type="time" name="time[]">
-        <p>Test Price:</p>
-        <input type="number" name="price[]">
-
-        <label for="test[]">CPU Test (Aida64)</label>
-        <input type="checkbox" name="test[]" value="cpu">
-        <p>Test duration:</p>
-        <input type="time" name="time[]">
-        <p>Test Price:</p>
-        <input type="number" name="price[]">
-
-        <label for="test[]">GPU Test (3DMark)</label>
-        <input type="checkbox" name="test[]" value="gpu">
-        <p>Test duration:</p>
-        <input type="time" name="time[]">
-        <p>Test Price:</p>
-        <input type="number" name="price[]">
-        <input type="submit" value="Add">
-    </form>
 </section>
 <section class="column">
-
+        <h3>Tests Done</h3>
+        <label for="test[]">RAM Test (MemTest86)</label>
+        <input type="checkbox" name="test[]" value="ram"><br>
+        <label>Test duration:</label>
+        <input type="time" name="time[]">
+        <label>Test Price:</label>
+        <input type="number" name="price[]">
+        <br>
+        <label for="test[]">CPU Test (Aida64)</label>
+        <input type="checkbox" name="test[]" value="cpu"><br>
+        <label>Test duration:</label>
+        <input type="time" name="time[]">
+        <label>Test Price:</label>
+        <input type="number" name="price[]">
+        <br>
+        <label for="test[]">GPU Test (3DMark)</label>
+        <input type="checkbox" name="test[]" value="gpu"><br>
+        <label>Test duration:</label>
+        <input type="time" name="time[]">
+        <label>Test Price:</label>
+        <input type="number" name="price[]">
 </section>
 </div>
+<input class="addServButton" type="submit" value="Add">
+</form>
 <?php include('templates/footer.php') ?>

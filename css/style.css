@@ -112,6 +112,10 @@ body > footer {
 	flex: 50%;
 }
 
+.column form {
+	margin: auto 2%;
+}
+
 input {
 	width: 100%;
 	padding: 0.6em 1em;
@@ -129,6 +133,10 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
+input[name="price[]"], [name="time[]"] {
+	width: 25%;
+}
+
 /* input[type="time"],[type="date"] {
 	width: 20%;
 }
@@ -136,6 +144,10 @@ input[type="submit"] {
 
 input[type="checkbox"], [type="radio"] {
 	width: 5%;
+}
+
+.addServButton {
+	margin-bottom: 25%;
 }
 
 .button {

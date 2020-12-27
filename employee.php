@@ -80,6 +80,7 @@
 <section class="column">
 	<a href="addService.php" class="button">Add a Service</a>
 	<a href="addComputer.php" class="button">Add a Computer to Database</a>
+	<a href="editService.php" class="button">Edit a Service</a>
 </section>
 </div>
 <?php include('templates/footer.php') ?>
