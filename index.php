@@ -6,4 +6,6 @@
 <a href="img/pic.png">surprise</a>
 </nav>
 
+
+
 <?php include('templates/footer.php') ?>

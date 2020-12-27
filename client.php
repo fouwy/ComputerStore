@@ -10,17 +10,20 @@
 	//unset($_SESSION["employees"]);
 	//unset($_SESSION["clients"]);
 	include('templates/header.php');
+	
 ?>
 
 <section>
-	<h2>Client noobs</h2>
-	<form action="view_client.php">
-		<input type="text" placeholder="Client name" name="client_name">
+	<h2>Client Homepage</h2>
+	<h3>Your computers registered with us </h3>
+	<form action="view_clientcomputers.php">
+		
 		<input type="submit" value="Search">
+		
 	</form>
 	<table border="1">
 		<tr>
-			<th scope="col">Name</th><th scope="col">Phone Number</th><th scope="col">Address</th><th>Tax ID</th>
+			<th scope="col">Computer ID</th><th scope="col">Brand Name</th>
 		</tr>
 		<?php if (is_array($clients) || !empty($msg_client)) {
 				if(!empty($msg_client)) { ?>
@@ -31,18 +34,60 @@
 				else {
 					foreach($clients as $client) { ?>
 		<tr>
-			<td><?php echo $client["name"]?>
-			</td><td><?php echo $client["phone_number"]?>
-			<td><?php echo $client["address"]?></td>
-			<td><?php echo $client["tax_id"]?></td>
+			<td><?php echo $client["id"]?>
+			<td><?php echo $client["brand"]?></td>
+			
 		</tr>
 		<?php 		}
 				} 
 			}
 			?>
 	</table>
+	<h3>Your computers service history</h3>
+	<form action="view_clientservices.php">
+		
+		<input type="submit" value="Search">
+		
+	</form>
+	<table border="1">
+		<tr>
+			<th scope="col">Model Year</th>
+			<th scope="col">Brand</th>
+			<th scope="col">Bill(€)</th>
+			<th scope="col">Finish Date</th>
+			
+			
+		</tr>
+		<?php if (is_array($clients) || !empty($msg_client)) {
+				if(!empty($msg_client)) { ?>
+				<tr>
+					<td colspan="4"><?php echo $msg_client?></td>
+				</tr>	
+				<?php } 
+				else {
+					foreach($clients as $client) { ?>
+		<tr>
+			<td><?php echo $client["year"]?></td>
+			<td><?php echo $client["brnd"]?></td>
+
+			<td><?php echo $client["total"]?></td>
+
+			
+			<td><?php echo $client["finish_date"]?></td>
+			
+		</tr>
+		<?php 		}
+				} 
+			}
+			?>
+	</table>
+
+
 </section>
-	<?php include('templates/footer.php') ?>
+	<?php include('templates/footer.php') 
+	
+	?>
+
 </body>
 
 
