@@ -1,4 +1,8 @@
-<?php include('../templates/header.php') ?>
+<?php 
+    include('../templates/header.php') ;
+    $msg = $_SESSION["msg"];
+    unset($_SESSION["msg"]);
+?>
 <div class="row">
     <section class="column">
         <h2>Empregados | Login</h2>

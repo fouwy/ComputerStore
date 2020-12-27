@@ -1,5 +1,4 @@
 <?php include('templates/header.php') ?>
-
 <nav class="navbar">
 <ul>
     <li><a href="auth/client_login.php">I'm a client</a></li>
@@ -7,7 +6,7 @@
     <li><a href="img/pic.png">surprise</a></li>
 </ul>
 </nav>
-<section></section>
+<section class="image"></section>
 <section></section>
 
 <?php include('templates/footer.php') ?>
