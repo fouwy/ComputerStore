@@ -3,59 +3,81 @@
 
 	include('templates/checkEmployeeLogin.php');
 
-	$msg = $_SESSION["msg"];
-	$msg_client = $_SESSION["msg_client"];
+	$service_parts = $_SESSION["parts"];
+	$service = $_SESSION["service"];
+	$computers = $_SESSION["computers"];
+	
 	$msg_services = $_SESSION["msg_services"];
-
-	$employees = $_SESSION["employees"];
-	$clients = $_SESSION["clients"];
-
-	$services = $_SESSION["services"];
-	$computers=$_SESSION["computers"];
 	$msg_computers = $_SESSION["msg_computers"];
-	//new one^^
 
-	unset($_SESSION["msg"]);
 	unset($_SESSION["msg_client"]);
 	unset($_SESSION["msg_computers"]);
+	unset($_SESSION["msg_services"]);
 	
 	include('templates/header.php');
 	include('templates/employee_navbar.php');
-	unset($_SESSION["msg_services"]);
 ?>
 
 <div class="row">
 <section class="column">
-<h2>Search parts used on a service by Service ID</h2>
+<h2>Search Service by Service ID</h2>
 <form action="view_servicesbyid.php">
 	<input type="text" placeholder="Service ID" name="serv_id">
 	<input type="submit" value="Search">
 </form>
 <table>
-	<tr>
-		<th scope="col">Name of Part</th>
-		<th scope="col">Price</th>
-		<th scope="col">Category</th>
-	
-	</tr>
-	<?php if (is_array($services) || !empty($msg_services)) { ?>
+
+<?php if (is_array($service_parts) || !empty($msg_services)) { ?>
 			<?php if(!empty($msg_services)) { ?>
 			<tr>
-				<td colspan="5"><?php echo $msg_services?></td>
+				<td colspan="2"><?php echo $msg_services?></td>
 			</tr>	
 			<?php } 
-			else {
-				foreach($services as $service) { ?>
-		<tr>
-			<td><?php echo $service["name"];?></td>
-			<td><?php echo $service["price"]?></td>
-			<td><?php echo $service["category"]?>
-		
-		</tr>
+			else { ?>
+				<tr>
+					<th scope="col">Employee</th>
+					<td><?php echo $service["name"];?></td>
+				</tr>
+				<tr>
+					<th scope="col">Computer ID</th>
+					<td><?php echo $service["service_item"];?></td>
+				</tr>
+				<tr>
+					<th scope="col">Admission</th>
+					<td><?php echo $service["adm_date"];?></td>
+				</tr>
+				<tr>
+					<th scope="col">Finish</th>
+					<td><?php echo $service["finish_date"];?></td>
+				</tr>
+				<tr>
+					<th scope="col">Delivery</th>
+					<td><?php echo $service["deliv_date"];?></td>
+				</tr>
+				<tr>
+					<th scope="col">Total</th>
+					<td><?php echo $service["total"];?></td>
+				</tr>
+			<?php foreach($service_parts as $part) { ?>
+	<tr>
+		<th scope="col">Name of Part</th>
+		<td><?php echo $part["name"];?></td>
+	</tr>
+	<tr>
+		<th scope="col">Price</th>
+		<td><?php echo $part["price"]?></td>
+	</tr>
+	<tr>
+		<th scope="col">Category</th>
+		<td><?php echo $part["category"]?>
+	</tr>
+	<?php if(next($service_parts)) { ?>
+				<tr><td class="divider" colspan="2">Next Part</td></tr>
+		<?php } ?>
 	<?php 		}
 			} 
 		}
-		?>
+		?>	
 </table>
 </section>
 <section class="column">
@@ -94,10 +116,6 @@
 			}
 			?>
 	</table>
-
-
-
-
 </section>
 </div>
 <?php include('templates/footer.php') ?>
