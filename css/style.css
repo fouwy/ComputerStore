@@ -234,3 +234,8 @@ tr:hover {
 	background-color: #08d9d6;
 } */
 
+
+img {
+	max-width: 100%;
+	height: auto;
+  }
