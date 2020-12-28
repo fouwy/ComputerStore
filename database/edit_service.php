@@ -6,27 +6,18 @@
             $dbh->exec('PRAGMA foreign_keys = ON');
             $dbh->beginTransaction();
 
-            $query = 'UPDATE service SET';
-            $params = array();
-
             if ($deliv_date != '') {
-                $query = $query . ' delivery_date=?';
-                $params[] = $deliv_date;
+                $stmt = $dbh->prepare('UPDATE service SET delivery_date=?  WHERE id=?');
+                $stmt->execute(array($deliv_date, $service_id));
             }
             if ($finish_date != '') {
-                $query = $query . ', finish_date=?';
-                $params[] = $finish_date;
+                $stmt = $dbh->prepare('UPDATE service SET finish_date=?  WHERE id=?');
+                $stmt->execute(array($finish_date, $service_id));
             }
             if ($price != '') {
-                $query = $query . ', total=?';
-                $params[] = $price;
+                $stmt = $dbh->prepare('UPDATE service SET total=?  WHERE id=?');
+                $stmt->execute(array($price, $service_id));
             }
-
-            $params[] = $service_id;
-            $query = $query . ' WHERE id=?';
-
-            $stmt = $dbh->prepare($query);
-            $stmt->execute($params);
 
             $dbh->commit();
         } catch (PDOException $e) {

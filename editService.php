@@ -1,14 +1,14 @@
 <?php
     session_start();
     include('templates/checkEmployeeLogin.php');
+    include('templates/header.php');
+    include('templates/employee_navbar.php');
     
     $msg = $_SESSION["msg"];
     $msg_serv = $_SESSION["msg_serv"];
     unset($_SESSION["msg"]);
     unset($_SESSION["msg_serv"]);
 
-    include('templates/header.php');
-    include('templates/employee_navbar.php');
 ?>
 
 
@@ -58,9 +58,7 @@
 
 <section class="column">
     <h2>Edit Service</h2>
-    <?php if(!empty($msg_serv)) {
-        echo "<p>" . $msg_serv . "</p>";
-    } ?>
+    <p><?php echo $msg_serv ?></p>
     <form action="service/action_editService.php">
         <label for="service_id">Service</label>
         <input type="number" name="service_id" placeholder="Insert Service ID">
