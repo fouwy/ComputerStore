@@ -94,11 +94,12 @@ body > footer {
 .navbar {
 	background-color: #252a34;
 	height: fit-content;
+	position: sticky;
+	top: 0;
 }
 
 .navbar ul{
 	list-style-type: none;
-	position: sticky;
 	margin: 0;
 	padding: 0;
 

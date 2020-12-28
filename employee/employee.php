@@ -61,7 +61,7 @@
 			<?php foreach($service_parts as $part) { ?>
 	<tr>
 		<th scope="col">Name of Part</th>
-		<td><?php echo $part["name"];?></td>
+		<td><?php echo $part["name"] . "(x" . $part["quantity"] . ")";?></td>
 	</tr>
 	<tr>
 		<th scope="col">Price</th>

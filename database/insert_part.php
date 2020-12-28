@@ -23,7 +23,7 @@
             $stmt->execute(array($service_id));
 
             $total = $stmt->fetch();
-            $total = $total["total"] + $price;
+            $total = $total["total"] + $price * $quantity;
 
             $stmt = $dbh->prepare('UPDATE service SET total=?  WHERE id=?');
             $stmt->execute(array($total, $service_id));
