@@ -1,0 +1,241 @@
+/* https://colorhunt.co/palette/17117 */
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	max-width: 60em;
+	/* background-color: #eaeaea; */
+	margin: 0 auto;
+	display: grid;
+	grid-template-rows: min-content 2.5em auto min-content min-content;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/**
+ * Header
+ **/
+
+body > header {
+	background-color: #252a34;
+	border-bottom: 0.25em solid #ff2e63;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+body > header h1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	margin: 0;
+	padding: 20px 20px 20px 20px;
+
+}
+
+body > header h1 a{
+	text-decoration: none;
+	background-color: #252a34;
+	color: #08d9d6;
+	padding-right: 0.5em;
+	border-right: 0.01em solid #ff2e63;
+}
+
+body > header form {
+	display: flex;
+	flex-direction: row;
+	text-decoration: none;
+	background-color: #252a34;
+	color: #08d9d6;
+}
+
+body > header form label {
+	display: block;
+	margin-top: 1.5em;
+	padding-right: 1em;
+	white-space: nowrap;
+	font-size: large;
+}
+
+body > header form input {
+	display: block;
+	margin: 1em 1em;
+	border-color: #ff2e63;
+	transition-duration: 0.4s;
+}
+
+body > header form input:hover {
+	background-color: #ff2e63;
+	color: #252a34;
+}
+
+.image {
+	background: transparent;
+}
+html {
+	background-image: url(../img/shop-background.jpg);
+	height: 100%;
+	background-repeat: repeat-y;
+	background-size: cover;
+}
+/**
+ * Footer
+ **/
+
+body > footer {
+	background-color: #252a34;
+	color: #eaeaea;
+	padding: 0.1em;
+}
+
+/**
+ * Nav Bar
+**/
+.navbar {
+	background-color: #252a34;
+	height: fit-content;
+	position: sticky;
+	top: 0;
+}
+
+.navbar ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+.navbar li {
+	display: inline;
+	float: left;
+	border-right: 1px solid #eaeaea;
+}
+
+.navbar li:last-child {
+	border-right: none;
+}
+
+.navbar li a {
+	display: block;
+	text-align: center;
+	padding: 0.7em 2em;
+	text-decoration: none;
+	color: #08d9d6;
+}
+
+.navbar li a:hover {
+	background-color: #ff2e63;
+	color:  #252a34;
+}
+
+#active {
+	color: #252a34;
+	background-color: #eaeaea;
+}
+
+#hidden {
+	color: #252a34;
+}
+/**
+ * Other
+**/
+
+.row {
+	display: flex;
+	/* margin-bottom: 25%; */
+}
+
+.column {
+	flex: 50%;
+	margin: 0 1%;
+}
+
+
+input {
+	width: 100%;
+	padding: 0.6em 1em;
+	margin: 1em 0;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+input[type="submit"] {
+	background-color: #252a34;
+	color: #08d9d6;
+	padding: 0.7em 0.5em;
+	font-size: medium;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+input[name="price[]"], [name="time[]"] {
+	width: 25%;
+}
+
+/* input[type="time"],[type="date"] {
+	width: 20%;
+}
+*/
+
+input[type="checkbox"], [type="radio"] {
+	width: 5%;
+}
+
+.addServButton {
+	margin-bottom: 22%;
+}
+
+.button {
+	width: 80%;
+	box-sizing: border-box;
+	display: inline-block;
+	background-color: #252a34;
+	color: #08d9d6;
+	white-space: nowrap;
+	text-align: center;
+	padding: 0.7em 0.5em;
+	margin: 3.5% 10%;
+	font-size: medium;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+/**
+ * Tables
+ **/
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+}
+
+th, td {
+	padding: 0.4em;
+	border: 1px solid black;
+}
+
+th {
+	background-color: #252a34;
+	color: #08d9d6;
+}
+tr {
+	background-color: #eaeaea;
+	transition-duration: 0.1s;
+}
+
+tr:hover {
+	background-color: #252a34;
+	color: #eaeaea;
+}
+
+/* .divider {
+	background-color: #08d9d6;
+} */
+
+
+img {
+	max-width: 100%;
+	height: auto;
+  }
