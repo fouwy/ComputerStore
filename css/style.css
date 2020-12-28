@@ -212,6 +212,7 @@ th {
 	color: #08d9d6;
 }
 tr {
+	background-color: #eaeaea;
 	transition-duration: 0.1s;
 }
 
