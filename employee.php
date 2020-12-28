@@ -22,8 +22,8 @@
 	include('templates/header.php');
 	include('templates/employee_navbar.php');
 	unset($_SESSION["msg_services"]);
-	// echo $_SERVER['SCRIPT_NAME'];
 ?>
+
 <div class="row">
 <section class="column">
 <h2>Search parts used on a service by Service ID</h2>
@@ -66,7 +66,8 @@
 	</form>
 	<table>
 		<tr>
-			<th scope="col">ID on database</th>
+			<th scope="col">Service ID</th>
+			<th scope="col">Computer ID</th>
 			<th scope="col">Brand</th>
 			<th scope="col">Model</th>
 			<th scope="col">Model Year</th>
@@ -81,6 +82,7 @@
 				else {
 					foreach($computers as $computer) { ?>
 			<tr>
+				<td><?php echo $computer["service_id"];?></td>
 				<td><?php echo $computer["id"];?></td>
 				<td><?php echo $computer["brand"]?></td>
 				<td><?php echo $computer["model_name"]?></td>

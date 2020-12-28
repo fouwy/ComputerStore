@@ -14,7 +14,7 @@
         $_SESSION["msg"] = "Added Part Successfully";
     } catch (PDOException $e) {
         $err_msg = $e->getMessage();
-       // $_SESSION["msg"] = "Failed to insert part";
+       
        $_SESSION["msg"] = $err_msg;
     }
 

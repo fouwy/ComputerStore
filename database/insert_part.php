@@ -19,6 +19,14 @@
             $stmt->execute(array($part_id, $quantity, $service_id));
 
             //TODO: Adicionar o preco ao total do servico
+            $stmt = $dbh->prepare('SELECT total FROM SERVICE WHERE id=?');
+            $stmt->execute(array($service_id));
+
+            $total = $stmt->fetch();
+            $total = $total["total"] + $price;
+
+            $stmt = $dbh->prepare('UPDATE service SET total=?  WHERE id=?');
+            $stmt->execute(array($total, $service_id));
 
             $dbh->commit();
         } catch (PDOException $e) {
