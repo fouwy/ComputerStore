@@ -3,9 +3,6 @@
 	
 	$name = $_SESSION["cli_name"];
    
-    //var_dump($name);
-    //die();
- /// USING "BRND" para nao bater com o brand do clientcomputers :)
 	$stmt = $dbh->prepare('SELECT service_item,finish_date,total,model.brand as brnd,model.model_year as year  FROM service
                             
                             JOIN computer ON computer.id=service_item
@@ -15,10 +12,6 @@
                             WHERE person.name=?
                            ');
 
-
-
-
-
 	$stmt->execute(array($name));
 	$clients = $stmt->fetchAll();
 
@@ -27,10 +20,4 @@
 	} else {
         $_SESSION["msg_client"] = "No services ";
 	}
-
-
-
-
-
-	header("Location: client.php");
 ?>

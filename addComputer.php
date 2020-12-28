@@ -9,8 +9,8 @@
 
 <div class="row">
 <section class="column">
-<p> <?php echo $msg;?></p>
 <h2>Add a Computer</h2>
+<p> <?php echo $msg;?></p>
 <form action="service/action_addComputer.php">
     <label for="client_id">Nome do Cliente</label>
     <input type="text" name="client_id">

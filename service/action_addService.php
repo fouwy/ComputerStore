@@ -27,6 +27,8 @@
     try {
         $serv_id = addService( $adm_date, $finish_date, $deliv_date,
                     $service_by, $item, $tests, $times, $prices);
+
+        $_SESSION["msg"] = "Service Added!";            
     } catch (PDOException $e) {
         $err_msg = $e->getMessage();
         $_SESSION["msg"] = $err_msg;

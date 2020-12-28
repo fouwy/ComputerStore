@@ -9,6 +9,7 @@
 
     try {
         $computer_id = insertComputerInDB($client, $brand, $year, $model);
+        $_SESSION["msg"] = "Computer Added!";
     } catch (PDOException $e) {
         $err_msg = $e->getMessage();
         $_SESSION["msg"] = $err_msg;
