@@ -1,11 +1,14 @@
 <?php 
-    include('../templates/header.php');
     session_start();
+    include('../templates/header.php');
+    $msg = $_SESSION["message"];
+    unset($_SESSION["message"]);
 ?>
 
 <div class="row">
 <section class="column">
     <h2>Clientes | Login</h2>
+    <p><?php echo $msg;?></p>
     <form action="action_clientLogin.php" method="post">
         <label for="name">Username</label>
         <input type="text" placeholder="" name="username" required>

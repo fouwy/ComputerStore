@@ -1,5 +1,8 @@
 <?php
 	session_start();
+
+	include('templates/checkEmployeeLogin.php');
+
 	$msg = $_SESSION["msg"];
 	$msg_client = $_SESSION["msg_client"];
 	$msg_services = $_SESSION["msg_services"];

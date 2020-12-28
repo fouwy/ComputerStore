@@ -1,11 +1,12 @@
 <?php 
     include('../templates/header.php') ;
-    $msg = $_SESSION["msg"];
-    unset($_SESSION["msg"]);
+    $msg = $_SESSION["message"];
+    unset($_SESSION["message"]);
 ?>
 <div class="row">
     <section class="column">
         <h2>Empregados | Login</h2>
+        <p><?php echo $msg;?></p>
         <form action="action_employeeLogin.php" method="post">
             <label for="name">Username</label>
             <input type="text" placeholder="" name="username" required>

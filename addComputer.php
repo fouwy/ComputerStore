@@ -1,5 +1,7 @@
 <?php
     session_start();
+    include('templates/checkEmployeeLogin.php');
+    
     $msg = $_SESSION["msg"];
     unset($_SESSION["msg"]);
 
