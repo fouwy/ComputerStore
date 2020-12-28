@@ -132,6 +132,10 @@ body > footer {
 	color: #252a34;
 	background-color: #eaeaea;
 }
+
+#hidden {
+	color: #252a34;
+}
 /**
  * Other
 **/
