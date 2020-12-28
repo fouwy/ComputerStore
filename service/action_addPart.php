@@ -18,5 +18,5 @@
        $_SESSION["msg"] = $err_msg;
     }
 
-    header('Location: ../editService.php');
+    header('Location: ../employee/editService.php');
 ?>

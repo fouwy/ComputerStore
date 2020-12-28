@@ -14,26 +14,29 @@
                                 service_by, service_item, total)
                                 VALUES (?,?,?,?,?,?)');
             $stmt->execute(array($adm_date, $deliv_date, $finish_date, 
-                                $service_by, $item, 1));
+                                $service_by, $item, 5));
             
             $service_id = $dbh->lastInsertId();
             
             $total = 0;
             //Add each test and accumulate the prices
-            foreach($tests as $test) {
-                if ($test == "ram") {
-                    $i = 0;    
-                } else if ($test == "cpu") {
-                    $i = 1;
-                } else if ($test == "gpu") {
-                    $i = 2;
+            if(is_array($tests)) {
+                foreach($tests as $test) {
+                    if ($test == "ram") {
+                        $i = 0;    
+                    } else if ($test == "cpu") {
+                        $i = 1;
+                    } else if ($test == "gpu") {
+                        $i = 2;
+                    }
+                    addTest($service_id, $test, $times[$i], $prices[$i]);
+                    $total += $prices[$i];
                 }
-                addTest($service_id, $test, $times[$i], $prices[$i]);
-                $total += $prices[$i];
+                $stmt = $dbh->prepare(' UPDATE service SET total = ?
+                                        WHERE id = ?');
+                $stmt->execute(array($total, $service_id));
             }
-            $stmt = $dbh->prepare(' UPDATE service SET total = ?
-                                    WHERE id = ?');
-            $stmt->execute(array($total, $service_id));
+
             $dbh->commit();
         } catch (PDOException $e) {
             $dbh->rollBack();

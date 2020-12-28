@@ -13,7 +13,7 @@
 
     if (empty($service_id)) {
         $_SESSION["msg_serv"] = "Enter a valid Service ID"; 
-        header('Location: ../editService.php');
+        header('Location: ../employee/editService.php');
         die();
     }
 
@@ -26,5 +26,5 @@
        $_SESSION["msg_serv"] = $err_msg;
     }
 
-    header('Location: ../editService.php');
+    header('Location: ../employee/editService.php');
 ?>

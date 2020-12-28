@@ -13,20 +13,21 @@
             $stmt->execute(array($service_id));
             $total = $stmt->fetch();
 
-            foreach($tests as $test) {
-                if ($test == "ram") {
-                    $i = 0;    
-                } else if ($test == "cpu") {
-                    $i = 1;
-                } else if ($test == "gpu") {
-                    $i = 2;
+            if (is_array($tests)) {
+                foreach($tests as $test) {
+                    if ($test == "ram") {
+                        $i = 0;    
+                    } else if ($test == "cpu") {
+                        $i = 1;
+                    } else if ($test == "gpu") {
+                        $i = 2;
+                    }
+                    addTest($service_id, $test, $times[$i], $prices[$i]);
+                    $total["total"] += $prices[$i];
                 }
-                addTest($service_id, $test, $times[$i], $prices[$i]);
-                $total["total"] += $prices[$i];
+                $stmt = $dbh->prepare('UPDATE service SET total=?  WHERE id=?');
+                $stmt->execute(array($total["total"], $service_id));
             }
-            $stmt = $dbh->prepare('UPDATE service SET total=?  WHERE id=?');
-            $stmt->execute(array($total["total"], $service_id));
-
             //Update dates or total cost
             if ($deliv_date != '') {
                 $stmt = $dbh->prepare('UPDATE service SET delivery_date=?  WHERE id=?');

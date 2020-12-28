@@ -1,19 +1,19 @@
 <?php
     session_start();
-    include('templates/checkEmployeeLogin.php');
+    include('../templates/checkEmployeeLogin.php');
     
     $employees = $_SESSION["employees"];
     $msg = $_SESSION["msg"];
     unset($_SESSION["msg"]);
     
-    include('templates/header.php');
-    include('templates/employee_navbar.php');
+    include('../templates/header.php');
+    include('../templates/employee_navbar.php');
 ?>
 <div class="row">
 <section class="column">
     <h2>Add Service </h2>
     <p><?php echo $msg;?></p>
-    <form action="service/action_addService.php">
+    <form action="../service/action_addService.php">
         <label for="adm_date">Admission date</label><br>
         <input type="date" name="adm_date">
         <br>
@@ -55,4 +55,4 @@
 </div>
 <input class="addServButton" type="submit" value="Add">
 </form>
-<?php include('templates/footer.php') ?>
+<?php include('../templates/footer.php') ?>

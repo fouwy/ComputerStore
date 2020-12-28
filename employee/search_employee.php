@@ -1,15 +1,19 @@
 <?php
 	session_start();
 	
-	include('templates/checkEmployeeLogin.php');
+	include('../templates/checkEmployeeLogin.php');
 	
     $msg = $_SESSION["msg"];
     $msg_client = $_SESSION["msg_client"];
 
     $employees = $_SESSION["employees"];
-    $clients = $_SESSION["clients"];
-    include('templates/header.php');
-	include('templates/employee_navbar.php');
+	$clients = $_SESSION["clients"];
+	
+	unset($_SESSION["msg"]);
+	unset($_SESSION["msg_client"]);
+	
+    include('../templates/header.php');
+	include('../templates/employee_navbar.php');
 ?>
 
 <div class="row">
@@ -80,4 +84,4 @@
 </section>
 </div>
 
-<?php include('templates/footer.php'); ?>
+<?php include('../templates/footer.php'); ?>

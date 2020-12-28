@@ -1,10 +1,7 @@
 <?php
-	require_once("database/init.php");
+	require_once("../database/init.php");
 	
 	$number =  $_GET["serv_id"];
-   
-    //var_dump($number);
-    //die();
 
 	$stmt = $dbh->prepare('SELECT name,price ,category  FROM part
                             WHERE part.service_id = ?
@@ -20,17 +17,11 @@
 	$service = $stmt->fetchAll();
 
 	if (!empty($service)) {
-		// var_dump($service);
-		// die();
 		$_SESSION["parts"] = $parts;
 		$_SESSION["service"] = $service[0];
 	} else {
         $_SESSION["msg_services"] = "Could not find a service with this ID";
 	}
-
-
-
-
 
 	header("Location: employee.php");
 ?>

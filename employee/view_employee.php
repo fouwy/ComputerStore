@@ -1,5 +1,5 @@
 <?php
-	require_once("database/init.php");
+	require_once("../database/init.php");
 	
 	$name = "{$_GET['name']}%";
 

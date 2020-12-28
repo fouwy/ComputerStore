@@ -15,7 +15,7 @@
         $_SESSION["msg"] = $err_msg;
     }
 
-    header('Location: ../addComputer.php');
+    header('Location: ../employee/addComputer.php');
 ?>
 
 

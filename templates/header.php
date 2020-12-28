@@ -2,7 +2,7 @@
     session_start();
     $logo_link = 'http://localhost:8080/ComputerStore/sibd/index.php';
     if (!empty($_SESSION["emp_name"])) {
-        $logo_link = 'http://localhost:8080/ComputerStore/sibd/employee.php';
+        $logo_link = 'http://localhost:8080/ComputerStore/sibd/employee/employee.php';
         $user = $_SESSION["emp_name"];
     } else if (!empty($_SESSION["cli_name"])) {
         $logo_link = 'http://localhost:8080/ComputerStore/sibd/client.php';

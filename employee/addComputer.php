@@ -1,19 +1,19 @@
 <?php
     session_start();
-    include('templates/checkEmployeeLogin.php');
+    include('../templates/checkEmployeeLogin.php');
     
     $msg = $_SESSION["msg"];
     unset($_SESSION["msg"]);
 
-    include('templates/header.php');
-    include('templates/employee_navbar.php');
+    include('../templates/header.php');
+    include('../templates/employee_navbar.php');
 ?>
 
 <div class="row">
 <section class="column">
 <h2>Add a Computer</h2>
 <p> <?php echo $msg;?></p>
-<form action="service/action_addComputer.php">
+<form action="../service/action_addComputer.php">
     <label for="client_id">Nome do Cliente</label>
     <input type="text" name="client_id">
     <br>
@@ -46,4 +46,4 @@
 <section class="column">
 </section>
 </div>
-<?php include('templates/footer.php') ?>
+<?php include('../templates/footer.php') ?>

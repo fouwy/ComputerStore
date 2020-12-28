@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	include('templates/checkEmployeeLogin.php');
+	include('../templates/checkEmployeeLogin.php');
 
 	$service_parts = $_SESSION["parts"];
 	$service = $_SESSION["service"];
@@ -14,8 +14,8 @@
 	unset($_SESSION["msg_computers"]);
 	unset($_SESSION["msg_services"]);
 	
-	include('templates/header.php');
-	include('templates/employee_navbar.php');
+	include('../templates/header.php');
+	include('../templates/employee_navbar.php');
 ?>
 
 <div class="row">
@@ -52,7 +52,7 @@
 				</tr>
 				<tr>
 					<th scope="col">Delivery</th>
-					<td><?php echo $service["deliv_date"];?></td>
+					<td><?php echo $service["delivery_date"];?></td>
 				</tr>
 				<tr>
 					<th scope="col">Total</th>
@@ -118,4 +118,4 @@
 	</table>
 </section>
 </div>
-<?php include('templates/footer.php') ?>
+<?php include('../templates/footer.php') ?>

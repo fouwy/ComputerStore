@@ -9,7 +9,7 @@
 
     if (!empty($name)) {
         $_SESSION["emp_name"] = $name["name"];
-        header('Location: ../employee.php');
+        header('Location: ../employee/employee.php');
     } else {
         $_SESSION["msg"] = "Login Failed";
         header('Location: employee_login.php');
