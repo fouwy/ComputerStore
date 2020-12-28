@@ -8,10 +8,13 @@
 	$clients = $_SESSION["clients"];
 
 	$services = $_SESSION["services"];
+	$computers=$_SESSION["computers"];
+	$msg_computers = $_SESSION["msg_computers"];
 	//new one^^
 
 	unset($_SESSION["msg"]);
 	unset($_SESSION["msg_client"]);
+	unset($_SESSION["msg_computers"]);
 	
 	include('templates/header.php');
 	include('templates/employee_navbar.php');
@@ -53,6 +56,43 @@
 </table>
 </section>
 <section class="column">
+<h2>Search Computers by Name of client</h2>
+	<form action="view_computersbyname.php">
+		<input type="text" placeholder="Name" name="nameofclient">
+		<input type="submit" value="Search">
+	</form>
+	<table>
+		<tr>
+			<th scope="col">ID on database</th>
+			<th scope="col">Brand</th>
+			<th scope="col">Model</th>
+			<th scope="col">Model Year</th>
+		
+		</tr>
+		<?php if (is_array($computers) || !empty($msg_computers)) { ?>
+				<?php if(!empty($msg_computers)) { ?>
+				<tr>
+					<td colspan="5"><?php echo $msg_computers?></td>
+				</tr>	
+				<?php } 
+				else {
+					foreach($computers as $computer) { ?>
+			<tr>
+				<td><?php echo $computer["id"];?></td>
+				<td><?php echo $computer["brand"]?></td>
+				<td><?php echo $computer["model_name"]?></td>
+				<td><?php echo $computer["model_year"]?>
+			
+			</tr>
+		<?php 		}
+				} 
+			}
+			?>
+	</table>
+
+
+
+
 </section>
 </div>
 <?php include('templates/footer.php') ?>

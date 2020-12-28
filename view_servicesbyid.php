@@ -1,13 +1,13 @@
 <?php
 	require_once("database/init.php");
 	
-	$number =  "{$_GET['serv_id']}%";
+	$number =  "{$_GET['serv_id']}";
    
     //var_dump($number);
     //die();
 
 	$stmt = $dbh->prepare('SELECT name,price ,category  FROM part
-                            WHERE part.service_id LIKE ?
+                            WHERE part.service_id = ?
                            ');
 
 
