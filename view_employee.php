@@ -13,5 +13,5 @@
 		$_SESSION["msg"] = "No employee with that name";
 	}
 
-	header("Location: employee.php");
+	header("Location: search_employee.php");
 ?>

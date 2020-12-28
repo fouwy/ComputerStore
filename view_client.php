@@ -14,5 +14,5 @@
 		$_SESSION["msg_client"] = "No Client with that name";
 	}
 
-	header("Location: employee.php");
+	header("Location: search_employee.php");
 ?>

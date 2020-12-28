@@ -1,4 +1,10 @@
 <?php
+    session_start();
+    $msg = $_SESSION["msg"];
+    $msg_client = $_SESSION["msg_client"];
+
+    $employees = $_SESSION["employees"];
+    $clients = $_SESSION["clients"];
     include('templates/header.php');
 	include('templates/employee_navbar.html');
 ?>
