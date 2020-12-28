@@ -11,19 +11,7 @@
     $times = $_GET["time"];
     $prices = $_GET["price"];
 
-    //TODO: need to check if box for time and price of a certain test is checked
-
-    // var_dump($adm_date, $finish_date, $deliv_date, $item, $tests, $prices, $times);
-    // die();
-
-    // if(empty($tests)) {
-    //     echo("no tests");
-    // } else {
-    //     for($i=0; $i<$n; $i++) {
-    //         echo($tests[$i] . " ");
-    //     }
-    // }
-
+    
     try {
         $serv_id = addService( $adm_date, $finish_date, $deliv_date,
                     $service_by, $item, $tests, $times, $prices);

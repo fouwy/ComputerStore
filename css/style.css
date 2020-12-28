@@ -75,8 +75,7 @@ body > header form input:hover {
 html {
 	background-image: url(../img/shop-background.jpg);
 	height: 100%;
-	background-size: contain;
-	background-repeat: no-repeat;
+	background-repeat: repeat-y;
 	background-size: cover;
 }
 /**

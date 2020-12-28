@@ -6,8 +6,10 @@
     $finish_date = $_GET["edit_finish"];
     $deliv_date = $_GET["edit_deliv"];
     $price = $_GET["edit_price"];
-
-    
+    //TESTS
+    $tests = $_GET["test"];
+    $times = $_GET["time"];
+    $prices = $_GET["price"];
 
     if (empty($service_id)) {
         $_SESSION["msg_serv"] = "Enter a valid Service ID"; 
@@ -16,7 +18,7 @@
     }
 
     try {
-        editService($service_id, $finish_date, $deliv_date, $price);
+        editService($service_id, $finish_date, $deliv_date, $price, $tests, $times, $prices);
         $_SESSION["msg_serv"] = "Edited Service Successfully";
     } catch (PDOException $e) {
         $err_msg = $e->getMessage();

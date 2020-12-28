@@ -70,7 +70,29 @@
         <input type="date" name="edit_deliv">
 
         <label for="edit_price">Total Price</label>
-        <input type="number" name="edit_price">
+        <input type="number" name="edit_price" placeholder="Overrides Total Price to this number">
+
+        <p>Tests Done</p>
+        <label for="test[]">RAM Test (MemTest86)</label>
+        <input type="checkbox" name="test[]" value="ram"><br>
+        <label>Test duration:</label>
+        <input type="time" name="time[]">
+        <label>Test Price:</label>
+        <input type="number" name="price[]">
+        <br>
+        <label for="test[]">CPU Test (Aida64)</label>
+        <input type="checkbox" name="test[]" value="cpu"><br>
+        <label>Test duration:</label>
+        <input type="time" name="time[]">
+        <label>Test Price:</label>
+        <input type="number" name="price[]">
+        <br>
+        <label for="test[]">GPU Test (3DMark)</label>
+        <input type="checkbox" name="test[]" value="gpu"><br>
+        <label>Test duration:</label>
+        <input type="time" name="time[]">
+        <label>Test Price:</label>
+        <input type="number" name="price[]">
 
         <input type="submit" value="Edit Service">
     </form>

@@ -1,6 +1,4 @@
 <?php
-    include 'insert_computer.php';
-
     function addService($adm_date, $finish_date, $deliv_date,   
                         $service_by, $item, $tests, $times, $prices) {
         
