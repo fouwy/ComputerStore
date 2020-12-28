@@ -14,10 +14,10 @@
 <h2>Add a Computer</h2>
 <p> <?php echo $msg;?></p>
 <form action="../service/action_addComputer.php">
-    <label for="client_id">Nome do Cliente</label>
+    <label for="client_id">Client Name</label>
     <input type="text" name="client_id">
     <br>
-    <p>Marca</p>
+    <p>Brand</p>
     <input type="radio" id="b1" name="brand" value="Asus">
     <label for="b1">Asus</label>
 
@@ -36,9 +36,9 @@
     <input type="radio" id="b6" name="brand" value="MSI">
     <label for="b6">MSI</label>
 <br><br>
-    <label for="model_name">Modelo</label>
+    <label for="model_name">Model</label>
     <input type="text" name="model_name">
-    <label for="model_year">Ano do modelo</label>
+    <label for="model_year">Model Year</label>
     <input type="number" name="model_year" min="2010" step="1" max="2050" value="2020">
     <input type="submit" value="Add computer">
 </form>

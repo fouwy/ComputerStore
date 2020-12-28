@@ -7,7 +7,7 @@
 
 <div class="row">
 <section class="column">
-    <h2>Clientes | Login</h2>
+    <h2>Clients | Login</h2>
     <p><?php echo $msg;?></p>
     <form action="action_clientLogin.php" method="post">
         <label for="name">Username</label>
@@ -16,12 +16,12 @@
         <label for="password">Password</label>
         <input type="password" placeholder="" name="password" required>
         <br>
-        <input type="submit" value="Entrar">
+        <input type="submit" value="Sign In">
         
     </form>
 </section>
 <section class="column">
-    <a href="client_register.php" class="button">Novo Registo</a>
+    <a href="client_register.php" class="button">Register</a>
 </section>
 </div>
 <section></section>

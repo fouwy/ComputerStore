@@ -6,7 +6,9 @@
     <li style="float:right"><a id="hidden" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">surprise</a></li>
 </ul>
 </nav>
-<section class="image"></section>
+<section class="image">
+    <h2>About Us</h2>
+</section>
 <section></section>
 
 <?php include('templates/footer.php') ?>

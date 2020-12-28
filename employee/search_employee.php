@@ -18,7 +18,7 @@
 
 <div class="row">
 <section class="column">
-<h2>Search Client noobs</h2>
+<h2>Search Clients</h2>
 	<form action="view_client.php">
 		<input type="text" placeholder="Client name" name="client_name">
 		<input type="submit" value="Search">
@@ -53,7 +53,7 @@
 	</table>
 </section>
 <section class="column">
-<h2>Search Employees by Name</h2>
+<h2>Search Employees</h2>
 	<form action="view_employee.php">
 		<input type="text" placeholder="Employee Name" name="name">
 		<input type="submit" value="Search">

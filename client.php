@@ -3,7 +3,7 @@
 	if (!isset($_SESSION["cli_name"])) {
 		$_SESSION["message"] = "Please Login first";
 		header('Location: auth/client_login.php');
-	  }
+	}
 
 	require_once("view_clientcomputers.php");
 	require_once("view_clientservices.php");
