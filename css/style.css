@@ -127,6 +127,11 @@ body > footer {
 	background-color: #ff2e63;
 	color:  #252a34;
 }
+
+#active {
+	color: #252a34;
+	background-color: #eaeaea;
+}
 /**
  * Other
 **/

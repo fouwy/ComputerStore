@@ -6,7 +6,7 @@
     $employees = $_SESSION["employees"];
     $clients = $_SESSION["clients"];
     include('templates/header.php');
-	include('templates/employee_navbar.html');
+	include('templates/employee_navbar.php');
 ?>
 
 <div class="row">

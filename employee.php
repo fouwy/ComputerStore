@@ -14,8 +14,9 @@
 	unset($_SESSION["msg_client"]);
 	
 	include('templates/header.php');
-	include('templates/employee_navbar.html');
+	include('templates/employee_navbar.php');
 	unset($_SESSION["msg_services"]);
+	// echo $_SERVER['SCRIPT_NAME'];
 ?>
 <div class="row">
 <section class="column">

@@ -6,7 +6,7 @@
     unset($_SESSION["msg_serv"]);
 
     include('templates/header.php');
-    include('templates/employee_navbar.html');
+    include('templates/employee_navbar.php');
 ?>
 
 
